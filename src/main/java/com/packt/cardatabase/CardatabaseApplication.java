@@ -7,17 +7,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
-public class CardatabaseApplication extends SpringBootServletInitializer {
-	@Override
-	protected SpringApplicationBuilder configure
-			(SpringApplicationBuilder application) {
-		return application.sources(CardatabaseApplication.class);
-	}
+public class CardatabaseApplication {
 
 	// Inject repositories
 	@Autowired
@@ -32,10 +26,6 @@ public class CardatabaseApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(CardatabaseApplication.class, args);
 		//logger.info("Hello Spring Boot");
-	}
-
-	private static SpringApplicationBuilder configureApplication(SpringApplicationBuilder builder) {
-		return builder.sources(CardatabaseApplication.class).bannerMode(Banner.Mode.OFF);
 	}
 
 	@Bean
