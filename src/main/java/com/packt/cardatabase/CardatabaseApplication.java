@@ -34,10 +34,6 @@ public class CardatabaseApplication extends SpringBootServletInitializer {
 		//logger.info("Hello Spring Boot");
 	}
 
-	private static SpringApplicationBuilder configureApplication(SpringApplicationBuilder builder) {
-		return builder.sources(CardatabaseApplication.class).bannerMode(Banner.Mode.OFF);
-	}
-
 	@Bean
 	CommandLineRunner runner(){
 		return args -> {
